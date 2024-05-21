@@ -75,7 +75,6 @@ function startTimer() {
     timerInterval = setInterval(function() {
         var minutes = Math.floor(seconds / 60);
         var remainingSeconds = seconds % 60;
-// sir kinuha ko lang po sa google temporary code lang :)
         var displayMinutes = String(minutes).padStart(2, '0');
         var displaySeconds = String(remainingSeconds).padStart(2, '0');
 
