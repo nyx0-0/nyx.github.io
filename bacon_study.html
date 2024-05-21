@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BaCon | Study Application</title>
+        <link rel="stylesheet" href="bacon.css">
+        <link rel="stylesheet" href="study.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body id="body">
+        <div>
+            <h1 id="header">BaCon
+                <input type="checkbox" id="switch"
+                    class="checkbox" onclick="theme();">
+                <label for="switch" class="toggle">
+                <p ID="tSwitch">THEME</p>
+            </h1>
+        </div>
+        <nav  id="navbar">
+            <ul>
+                <li><a href="bacon_study.html">STUDY</a></li>
+                <li><a href="bacon_flashcard.html">FLASHCARD</a></li>
+                <li><a href="bacon_quiz.html">QUIZ</a></li>
+                <li><a href="bacon.html">CALCULATOR</a></li>
+                <li><a href="bacon_howto.html">HOW TO?</a></li>
+            </ul>
+        </nav>
+        <h2 class="title">STUDY MODE</h2>
+        <div class="study">
+            <section  id="studyDiv">
+              <input type="text" class="input"  label="enterNumber" id="number">
+              <button id="btnBi" type="button" class="binary" onclick="convertToBinary()">BINARY</button>
+              <button id="btnOct" type="button" class="octal" onclick="convertToOctal()">OCTAL</button>
+              <button id="btnHex"type="button" class="hexadecimal" onclick="convertToHexadecimal()">HEXADECIMAL</button>
+            </section>
+
+            <aside class="container">
+              <div id="explanation">Enter a number in the box provided above</div>
+            </aside>
+
+        </div>
+    </body>
+    <script src="bacon.js"></script>
+    <script src="study.js"></script>
+</html>

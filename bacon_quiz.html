@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BaCon | Study Application</title>
+        <link rel="stylesheet" href="bacon.css">
+        <link rel="stylesheet" href="quiz.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .flex-container {
+                display: flex;
+                justify-content: space-between;
+            }
+            #quizDiv {
+                flex: 3;
+                margin-right: 10px;
+            }
+            aside {
+                flex: 1;
+                border: 1px solid #ccc;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body id="body">
+        <div>
+            <h1 id="header">BaCon
+                <input type="checkbox" id="switch"
+                    class="checkbox" onclick="theme();">
+                <label for="switch" class="toggle">
+                <p id="tSwitch">THEME</p>
+            </h1>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="bacon_study.html">STUDY</a></li>
+                <li><a href="bacon_flashcard.html">FLASHCARD</a></li>
+                <li><a href="bacon_quiz.html">QUIZ</a></li>
+                <li><a href="bacon.html">CALCULATOR</a></li>
+                <li><a href="bacon_howto.html">HOW TO?</a></li>
+            </ul>
+        </nav>
+        <h2 class="title">QUIZ MODE</h2>
+        <div id="quizSettings">
+            <input class="numbers" type="number" placeholder="Number of Questions" id="quesNum">
+            <input class="btns" type="button" value="START" onclick="test();">
+            <input class="btns" type="button" value="RESET" onclick="reset();">
+            <p id="score">SCORE: </p>
+        </div>
+        <center>
+            <div class="flex-container">
+                <div id="quizDiv">
+                    <div class="container">
+                        <h1 id="genNumber">*GENERATED NUMBER*</h1>
+                        <h3 id="baseRep">*BASE REPRESENTATION*</h3>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Type answer here" id="quizAns">
+                        <br>
+                        <input id="submitBtn" class="btns" type="button" value="SUBMIT" onclick="submit();">
+                        <input id="skipBtn" class="btns" type="button" value="SKIP" onclick="skip();">
+                    </div>
+                </div>
+                <div id="divPig">
+                    <p id="dispPig"></p>
+                </div>
+            </div>
+        </center>
+        
+    </body>
+    <script src="bacon.js"></script>
+    <script src="quiz.js"></script>
+</html>

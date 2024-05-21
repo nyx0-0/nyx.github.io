@@ -1,0 +1,97 @@
+#fcSettings {
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 90%; 
+}
+
+label {
+    margin: 1px;
+    font-size: 10px;
+}
+
+#timerDisp {
+    margin-top: 3%;
+    margin-left: 1%;
+    font-size: 150%; 
+    padding: 5% 10%; 
+
+}
+
+#mainBtn {
+    margin-top: 0%;
+    margin-left: 5%;
+}
+
+#nextBtn{
+    margin-right: 50%;
+    margin-left: 45%;
+    margin-bottom: 5%;
+    width:600px; 
+}
+
+#timerInput::placeholder {
+font-size: 10px;
+}
+
+#qtyQues::placeholder {
+font-size: 10px;
+}
+
+#timerInput, #qtyQues{
+    margin-top: 2%;
+
+}
+
+#container1 {
+    background-color: white;
+    display: inline-block; 
+    vertical-align: top; 
+    width: 39%; 
+    box-sizing: border-box; 
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 3%; 
+    border: solid 10px #D7EFEA;
+    color: #7e51a8;
+    border-radius: 20px;
+    min-height:400px;
+    height: auto;
+}
+
+#result{
+    display: inline-block; 
+    vertical-align: top;
+    vertical-align:bottom;
+    width: 39%; 
+    box-sizing: border-box; 
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 3%; 
+    border: solid 10px #D7EFEA;
+    color: #7e51a8;
+    border-radius: 20px;
+    min-height: 400px;
+    height:auto;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    #container1, #result {
+        width: 90%;
+        margin-top:5%;
+        margin-right: 0; 
+        height: auto;
+    }
+    #nextBtn{
+        margin-right: 60%;
+        margin-left: 35%;
+        margin-bottom: 5%;
+        width:600px; 
+   }    
+}
+
+#result{
+    
+}

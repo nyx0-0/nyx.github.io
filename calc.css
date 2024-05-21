@@ -1,0 +1,54 @@
+#display {
+  border-radius: 2vh;
+  width: 98.3%; 
+  height: 7vh;
+  font-size: 5vh; 
+  text-align: right;
+  border: 0.5vh solid white;
+  background-color: #FACCE1;
+}
+
+#baseRes {
+  border-radius: 3vh;
+  width: 98.3%;
+  height: 18vh; 
+  font-size: 3vh; 
+  color: #3F1E5F;
+  text-align: left;
+  border: 0.5vh solid white;
+  background-color: white;
+}
+
+.btn {
+  border-radius: 2vh;
+  height: 7vh;
+  width: 15vh;
+  font-size: 3vh;
+  font-weight: bold;
+  text-align: center;
+  border: 0.5vh solid white;
+  background-color: #BA93DE;
+}
+
+.btnr {
+  border-radius: 2vh;
+
+  height: 7vh;
+  width: 15vh;
+  font-size: 3.9vh;
+  font-weight: bold;
+  text-align: center;
+  border: 0.5vh solid white;
+  background-color: #D7EFEA;
+}
+
+.result {
+  /*width: 70%;*/
+  border-radius: 5vh;
+  background-color: #DCB4EE;
+  height: 40%;
+  border: 2vh double white;
+  margin: auto;
+  margin-top: 2.5vh;
+}
+

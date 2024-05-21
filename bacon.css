@@ -1,0 +1,176 @@
+
+body {
+    background-color: #F9F9F9;
+    background-image: url("BACON.png");
+    margin: 0;
+    color: #7e51a8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#header {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #BA93DE;
+    padding-left:3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: left;
+    background: #BA93DE;
+    color: white;
+    font-size: 150%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #d7efea84;
+    border-radius: 5px;
+    padding: 1%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/*TOGGLE SWITCH*******************************************/
+#tSwitch {
+    padding-top: 25%;
+    padding-left: 5%;
+    font-size: 50%;
+}
+.toggle {
+    float: right;
+    position: relative ;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    border: 2px solid white;
+}
+       
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #BA93DE;
+    top: 1px;
+    left: 1px;
+    transition:  all 0.5s;
+}
+       
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+       
+.checkbox:checked + .toggle::after {
+    left: 30px;
+}
+       
+.checkbox:checked + .toggle {
+    float: right;
+    background-color: white;
+}
+       
+.checkbox {
+    display: none;
+}
+/* NAVBAR************************************************************************/
+nav {
+    background-color: #EBC8E8;
+    padding: 1%;
+    color: #fff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #D7EFEA;
+}
+
+.content {
+    padding: 5%;
+}
+/*FLASHCARDS******************************************************************/
+input[type=button] {
+    color: white;
+    font-weight: bold;
+    background-color: #EBC8E8;
+    border: solid;
+    border-color: #EBC8E8;
+    border-radius: 8px;
+    border-width: 3px;
+    height: 45px;
+    width: 20%;
+    margin-right: 5px;
+    margin: 5px 10px 0px 0px; 
+}
+.numbers {
+    border-color: #F6C6EA;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 3px;
+    max-width: 50%; 
+    height: 35px;
+    margin: 5px 10px 0px 0px; 
+}
+input[type=text] {
+    height: 45px;
+    margin: 15px;
+    border-radius: 8px;
+    border: double;
+    border-color: #BA93DE;
+    border-width: 5px;
+    width: 40%;
+    font-size: 100%;
+}
+
+#tSwitch {
+    margin-top: 25%;
+    margin-left: 10%;
+    font-size: 10px;
+}
+
+.container {
+    background-color: white;
+    display: inline-block; 
+    vertical-align: top; 
+    width: 90%; 
+    box-sizing: border-box; 
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 3%; 
+    border: solid 10px #D7EFEA;
+    color: #7e51a8;
+    border-radius: 20px;
+    padding: 5%
+}
+h1 {
+    font-size: 200%;
+}
+h3 {
+    font-size: 100%;
+}
+#howto {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*CALCULATOR******************************************************************/
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BaCon | Study Application</title>
+        <link rel="stylesheet" href="bacon.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body id="body">
+        <div>
+            <h1 id="header">BaCon
+                <input type="checkbox" id="switch"
+                    class="checkbox" onclick="theme();">
+                <label for="switch" class="toggle">
+                <p ID="tSwitch">THEME</p>
+            </h1>
+        </div>
+        <nav  id="navbar">
+            <ul>
+                <li><a href="bacon_study.html">STUDY</a></li>
+                <li><a href="bacon_flashcard.html">FLASHCARD</a></li>
+                <li><a href="bacon_quiz.html">QUIZ</a></li>
+                <li><a href="bacon.html">CALCULATOR</a></li>
+                <li><a href="bacon_howto.html">HOW TO?</a></li>
+            </ul>
+        </nav>
+        <h2 class="title">HOW TO USE BACON STUDY APP</h2>
+        <div class="container" id="howto">
+            
+            <h4>STUDY MODE</h4>
+            <ul>
+                <li>Enter a number, and then click the button of the desired base representation.</li>
+                <li>The box on the right will display steps on how to transform the number to its base form.</li>
+            </ul>
+            <h4>FLASHCARD MODE</h4>
+            <ul>
+                <li>Set the timer (in seconds). This represents how long a question will be flashed on the screen before moving onto the next.</li>
+                <li>Set the number of questions to be generated.</li>
+                <li>Click the "Next Card" button to move onto the next question without having to wait for the timer to end.</li>
+                <li>All of the correct answers will be shown after all the questions have been flashed on the screen.</li>
+            </ul>
+            <h4>QUIZ MODE</h4>
+            <ul>
+                <li>Set the number of questions to be generated.</li>
+                <li>Click the "START" button and a number (integer) will be flashed ont he screen together with the base representation that you will have to convert it to.</li>
+                <li>Type the answer on the text box and click "SUBMIT" to move forward to the next question.</li>
+                <li>There is a "SKIP" option, but clicking it would automatically mean that the question will not be scored.</li>
+                <li>The score will be shown after all the questions have been flashed on the screen.</li>
+            </ul>
+            <h4>CALCULATOR</h4>
+            <ul>
+                <li>The fourth page is a Base Converter with an integrated calculator.</li>
+                <li>Click first the desired base representation (Base 2, Base 8, or Base 16) followed by the base value desired (e.g. 1001001, 42, 2A).</li>
+                <li>The user can make normal calculations with decimal representations (whole numbers only), as well as base representations.</li>
+            </ul>
+        </div>
+    </body>
+    <script src="bacon.js"></script>
+</html>

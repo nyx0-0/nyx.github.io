@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BaCon | Study Application</title>
+    <link rel="stylesheet" href="bacon.css">
+    <link rel="stylesheet" href="flashcard.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body id="body">
+    
+    <div>
+        <h1 id="header">BaCon
+            <input type="checkbox" id="switch" class="checkbox" onclick="theme();">
+            <label for="switch" class="toggle">
+            <p id="tSwitch">THEME</p>
+        </h1>
+    </div>
+    <nav  id="navbar">
+        <ul>
+            <li><a href="bacon_study.html">STUDY</a></li>
+                <li><a href="bacon_flashcard.html">FLASHCARD</a></li>
+                <li><a href="bacon_quiz.html">QUIZ</a></li>
+                <li><a href="bacon.html">CALCULATOR</a></li>
+                <li><a href="bacon_howto.html">HOW TO?</a></li>
+        </ul>
+    </nav>
+    <h2 class="title">FLASHCARD MODE</h2>
+    <div class="btnDiv" id="mainBtn">
+        
+        <input class="btns" type="button" id="start" value="Start" onclick="play();">
+        <input class="btns" type="button" id="reset" value="Reset" onclick="reset();">
+        <div>
+            <input id="timerInput" class="numbers" type="number" placeholder="Timer (secs.)" min="1" >
+            <input class="numbers" type="number" placeholder="No. of Questions" name="quantity" min="1" id="qtyQues">
+        </div>
+    </div>
+    
+     <div class="container" id="container1">
+        <h4 id="timerDisp">00:00</h4>
+        <br>
+        <center>
+            <h2 id="base">*Base Representation*</h2>
+            <h1 id="num">*Number*</h1>
+        </center>
+    </div>
+  
+    <div id="result" class="container">
+        <center><b><p id="test">FINAL ANSWERS <br><br><br> </p></b></center>
+    </div>
+
+    <br><br><br>
+
+    <div class="btnDiv" id="nextBtn">
+        <input class="btns" type="button" id="next" value="Next Card" onclick="nextCard();">
+    </div>
+
+    <script src="bacon.js"></script>
+    <script src="flashcard.js"></script>
+</body>
+
+</html>
