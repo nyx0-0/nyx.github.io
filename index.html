@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+    background-color: #F9F9F9;
+    background-image: url("BACON.png");
+    margin: 0;
+    color: #7e51a8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#header {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #BA93DE;
+    padding-left:3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: left;
+    background: #BA93DE;
+    color: white;
+    font-size: 150%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #d7efea84;
+    border-radius: 5px;
+    padding: 1%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/*TOGGLE SWITCH*******************************************/
+#tSwitch {
+    padding-top: 25%;
+    padding-left: 5%;
+    font-size: 50%;
+}
+.toggle {
+    float: right;
+    position: relative ;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    border: 2px solid white;
+}
+       
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #BA93DE;
+    top: 1px;
+    left: 1px;
+    transition:  all 0.5s;
+}
+       
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+       
+.checkbox:checked + .toggle::after {
+    left: 30px;
+}
+       
+.checkbox:checked + .toggle {
+    float: right;
+    background-color: white;
+}
+       
+.checkbox {
+    display: none;
+}
+/* NAVBAR************************************************************************/
+nav {
+    background-color: #EBC8E8;
+    padding: 1%;
+    color: #fff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #D7EFEA;
+}
+
+.content {
+    padding: 5%;
+}
+/*FLASHCARDS******************************************************************/
+input[type=button] {
+    color: white;
+    font-weight: bold;
+    background-color: #EBC8E8;
+    border: solid;
+    border-color: #EBC8E8;
+    border-radius: 8px;
+    border-width: 3px;
+    height: 45px;
+    width: 20%;
+    margin-right: 5px;
+    margin: 5px 10px 0px 0px; 
+}
+.numbers {
+    border-color: #F6C6EA;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 3px;
+    max-width: 50%; 
+    height: 35px;
+    margin: 5px 10px 0px 0px; 
+}
+input[type=text] {
+    height: 45px;
+    margin: 15px;
+    border-radius: 8px;
+    border: double;
+    border-color: #BA93DE;
+    border-width: 5px;
+    width: 40%;
+    font-size: 100%;
+}
+.container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 90%;
+    border: solid;
+    margin: 2% 4% 4% 4%;
+    border-radius: 20px;
+    border-width: 10px;
+    border-color: #D7EFEA;
+    background-color: white;
+    color: #7e51a8;
+    padding: 2% 3% 3% 5%; /* Adjusted for mobile */
+}
+#tSwitch {
+    margin-top: 25%;
+    margin-left: 10%;
+    font-size: 10px;
+}
+
+/*CALCULATOR******************************************************************/
+
+    #display {
+      height: 7vh;
+      font-size: 5vh; 
+      text-align: right;
+      border: 0.5vh solid white;
+      background-color: #FACCE1;
+   }
+
+    #baseRes {
+      height: 18vh; 
+      font-size: 3vh; 
+      color: #3F1E5F;
+      text-align: left;
+      border: 0.5vh solid white;
+      background-color: white;
+    }
+
+    .btn {
+      height: 7vh;
+      width: 15vh;
+      font-size: 2vh;
+      font-weight: bold;
+      text-align: center;
+      border: 0.5vh solid white;
+      background-color: #ef8fb8;
+    }
+
+    .btnr {
+      height: 7vh;
+      width: 15vh;
+      font-size: 2vh;
+      font-weight: bold;
+      text-align: center;
+      border: 0.5vh solid white;
+      background-color: #ef8fb8;
+    }
+
+    .result {
+      background-color: #DCB4EE;
+      height: 40%;
+      border: 2vh double white;
+      margin: auto;
+      margin-top: 2.5vh;
+    }
+
+</style>
+    <head>
+        <title>BaCon | Study Application</title>
+        <link rel="stylesheet" href="bacon.css">
+        <link rel="stylesheet" href="calc.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body id="body">
+        
+        <div>
+            <h1 id="header">BaCon
+                <input type="checkbox" id="switch"
+                    class="checkbox" onclick="theme();">
+                <label for="switch" class="toggle">
+                <p ID="tSwitch">THEME</p>
+            </h1>
+        </div>
+        <nav  id="navbar">
+            <ul>
+                <li><a href="bacon_study.html">STUDY</a></li>
+                <li><a href="bacon_flashcard.html">FLASHCARD</a></li>
+                <li><a href="bacon_quiz.html">QUIZ</a></li>
+                <li><a href="bacon.html">CALCULATOR</a></li>
+                <li><a href="bacon_howto.html">HOW TO?</a></li>
+            </ul>
+            
+        </nav>
+        <table class="result">
+            <tr>
+                <td colspan="6">
+                    <div id="baseRes"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <div id="display"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="btn" onclick="hexValue('A')">A</td>
+                <td class="btn" onclick="hexValue('B')">B</td>
+                <td class="btn" onclick="hexValue('C')">C</td>
+                <td class="btn" onclick="hexValue('D')">D</td>
+                <td class="btn" onclick="hexValue('E')">E</td>
+                <td class="btn" onclick="hexValue('F')">F</td>
+            </tr>
+            <tr>
+                <td class="btn" onclick="enterNumber('7')">7</td>
+                <td class="btn" onclick="enterNumber('8')">8</td>
+                <td class="btn" onclick="enterNumber('9')">9</td>
+                <td class="btnr" onclick="MathOperation('/')">/</td>
+                <td colspan="2" class="btn" onclick="setBase('Bin')">Bin</td>
+            </tr>
+            <tr>
+                <td class="btn" onclick="enterNumber('4')">4</td>
+                <td class="btn" onclick="enterNumber('5')">5</td>
+                <td class="btn" onclick="enterNumber('6')">6</td>
+                <td class="btnr" onclick="MathOperation('*')">*</td>
+                <td colspan="2" class="btn" onclick="setBase('Oct')">Oct</td>
+            </tr>
+            <tr>
+                <td class="btn" onclick="enterNumber('1')">1</td>
+                <td class="btn" onclick="enterNumber('2')">2</td>
+                <td class="btn" onclick="enterNumber('3')">3</td>
+                <td class="btnr" onclick="MathOperation('+')">+</td>
+                <td colspan="2" class="btn" onclick="setBase('Dec')">Dec</td>
+            </tr>
+            <tr>
+                <td class="btn" onclick="enterNumber('0')">0</td>
+                <td class="btnr" onclick="Clear()">Del</td>
+                <td class="btnr" onclick="Compute()">=</td>
+                <td class="btnr" onclick="MathOperation('-')">-</td>
+                <td colspan="2" class="btn" onclick="setBase('Hex')">Hex</td>
+            </tr>
+        </table>
+    
+    <script src="bacon.js"></script>
+    <script>
+        var nums = [], disp = "", operations = [], currentBase = "Dec", ctrBase = 0, oct = "Oct", dec = "Dec", Oper = "", octalFlag = 0;
+        function setBase(base) {
+            if (base != dec) {
+                ctrBase++;
+                if (base == oct){
+                    octalFlag++;
+                }
+                currentBase = base;
+                disp = "";
+                document.getElementById('display').innerText = "B" +currentBase;
+            } else {
+                disp = "";
+                document.getElementById('display').innerText = "B" + dec;
+            }
+        }
+
+        function enterNumber(number) {
+            disp += number;
+            console.log("disp by enter" + disp);
+            document.getElementById('display').innerText += number;
+        }
+
+        function hexValue(value) {
+            if (currentBase === 'Hex' && /^[0-9A-F]$/.test(value)) { 
+                disp += value;
+                document.getElementById('display').innerText += value;
+            }
+        }
+
+        function MathOperation(oper) {
+            if (disp !== "") {
+                if (ctrBase > 0) {
+                    nums.push(convertInputToBase10(disp));
+                } else {
+                    nums.push(parseFloat(disp));
+                }
+                console.log("nums from math oper: " + nums);
+            }
+            if (nums.length > 0) {
+                operations.push({ operator: oper, number: parseFloat(disp) });  //  for multple inputs w/ diff oper
+                document.getElementById('display').innerText += oper;
+                disp = "";
+            }
+                console.log("oper used: " + oper);
+        }
+
+        function Compute() {
+            console.log("disp by comp: " + disp);
+            if (disp !== "") {
+                if (ctrBase > 0) {
+                    nums.push(convertInputToBase10(disp));
+                    console.log("num base: " + nums);
+                    console.log(typeof nums);
+                } else {
+                    nums.push(parseFloat(disp));
+                    console.log(typeof nums);
+                    console.log("num base: " + nums);
+                }
+                console.log("nums from comp: " + nums);
+                disp = "";
+                ctrBase = 0;
+                
+            }
+            console.log("disp by comp2: " + disp);
+            let result = parseInt(nums[0]); 
+            for (let i = 0; i < operations.length; i++) {
+                let nextNumber = parseInt(nums[i + 1]);
+                console.log(typeof nums[i]);
+                switch (operations[i].operator) {
+                    case '+': result += nextNumber; break;
+                    case '-': result -= nextNumber; break;
+                    case '*': result *= nextNumber; break;
+                    case '/': result /= nextNumber; break;
+                    default: break;
+                }
+            }
+            result = Math.round(result);
+            console.log("result type: " + typeof result); 
+            displayResult(result);
+            console.log("result: " + result)
+            nums = [result]; // reset nums w/ the result if may other calculations
+            console.log("nums type: " + typeof nums);
+        }
+
+        function convertInputToBase10(input) {
+            // for binary
+            if (/^[01]+(\.[01]+)?$/.test(input) && (octalFlag == 0)) {
+                console.log("binary" + parseInt(input, 2));
+                return parseInt(input, 2);
+            // for octal
+            } else if (/^(0o)?[0-9]+$/.test(input) && (octalFlag > 0)) {
+                console.log("oct: " +  input);
+                let decimalNum = parseInt(input, 10);
+                let octalNumber = "";
+                while (decimalNum > 0) { 
+                    let remainder = decimalNum % 8;
+                    console.log("remainder" + remainder);
+                    octalNumber = remainder.toString() + octalNumber;
+                    console.log("octNum" + octalNumber);
+                    decimalNum = Math.floor(decimalNum / 8);
+                }
+                octalFlag = 0;
+                return octalNumber;
+            
+            // for decimal
+            } else if (/^\d+(\.\d+)?$/.test(input)) {
+                console.log(parseInt(input));
+                return parseInt(input);  
+            // for hex with letters only
+            } else if (/^0x[0-9A-F]+(\.[0-9A-F]+)?$/.test(input)) {
+                console.log(parseInt(input.slice(2), 16));
+                return parseInt(input.slice(2), 16);  
+            // for hex with letters & num 
+            } else if (/^[0-9A-F]+(\.[0-9A-F]+)?$/.test(input)) {
+                console.log(parseInt(input, 16));
+                return parseInt(input, 16); 
+               
+            } else {
+                return NaN;
+            }
+        }
+
+        function displayResult(result) {
+            document.getElementById('display').innerText = result;
+            document.getElementById('baseRes').innerHTML =
+                `<br>Binary: ${result.toString(2)}
+                <br>Octal: ${result.toString(8)}
+                <br>Hexadecimal: ${result.toString(16).toUpperCase()}`;
+        }
+
+        function Clear() {
+            nums = []; disp = ""; Oper = ""; operations = []; 
+            document.getElementById('display').innerText = "";
+            document.getElementById('baseRes').innerHTML = "";
+        }
+</script>
+</body>
+</html>
