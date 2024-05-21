@@ -1,4 +1,3 @@
-// kinuha sa google, wait lang sir
 document.addEventListener("DOMContentLoaded", function () {
     var switchState = localStorage.getItem("switchState");
     if (switchState === "true") {
