@@ -1,0 +1,54 @@
+#quizSettings {
+    margin-top: 3%;
+    margin-left: 5%;
+    width: 90%; 
+}
+#quesNum::placeholder {
+    font-size: 10px;
+}
+#submitBtn {
+    display: none;
+    margin: 5px 0px 0px 0px;
+    font-size: 50%;
+    padding: 2px;
+}
+#skipBtn {
+    display: none;
+    margin: 5px 0px 0px 0px;
+    font-size: 50%;
+    padding: 2px;
+}
+
+img {
+    width: 100%;
+}
+#score {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 25px;
+}
+
+.flex-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+#quizDiv {
+    flex: 3;
+    margin-right: 20px;
+}
+#dispPig {
+    float: right;
+}
+#divPig {
+    width:30%;
+}
+#genNumber {
+    font-size: 120%;
+}
+
+#quizAns::placeholder {
+    font-size: 70%;
+}
